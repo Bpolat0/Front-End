@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+
+
+
+
+<script>
+
+let user = prompt("Adınızı giriniz: ");
+document.getElementById("user").innerHTML = user;
+
+let hrs = document.getElementById("hour");
+let mins = document.getElementById("minute");
+let secs = document.getElementById("second");
+
+
+setInterval(() =>{
+
+let currentTime = new Date();
+
+hrs.innerHTML = (currentTime.getHours()<10 ? "0" : "") + currentTime.getHours();
+mins.innerHTML = (currentTime.getMinutes()<10 ? "0" : "") + currentTime.getMinutes();
+secs.innerHTML = (currentTime.getSeconds()<10 ? "0" : "") + currentTime.getSeconds();
+
+    
+},1000)
+
+
+</script>
+
+</body>
+</html>
