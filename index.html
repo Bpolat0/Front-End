@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.img-frame1 {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    border: solid 5px black;
+    border-radius: 15px;
+}
+
+.img-frame2 {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 9;
+    grid-column-end: 12;
+    border: solid 5px black;
+    border-radius: 15px;
+}
+
+.img-frame1, .img-frame2 {
+    /* existing styles */
+    overflow: hidden;
+    padding: 5%;
+}
+
+.img-frame1 img, .img-frame2 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        
+        <div class="box img-frame1"><img src="https://picsum.photos/200" alt=""></div>
+        <div class="box img-frame2"><img src="https://picsum.photos/1000" alt=""></div>
+        <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam perferendis molestias ratione recusandae iusto? Voluptatem culpa quod ipsam cupiditate esse vel labore deserunt numquam, cumque molestiae minus eaque dicta. Corrupti.</p>
+        <p>Ullam molestiae quisquam aut incidunt! Aut iure atque sint sequi voluptatem laborum ipsam quis praesentium voluptatibus veritatis iusto corporis autem deleniti ipsa et maiores natus, eius nihil. Doloribus, enim! Id?</p>
+        <p>Beatae quam veniam impedit officiis quos nam aperiam eos illum est rerum autem minus quas, sapiente vitae dolorum voluptas. Optio pariatur quod libero ducimus a autem dolorum et, aliquam totam!</p>
+        <p>Distinctio, repellat dicta eaque eos corporis dignissimos provident odio minus aliquid est. Quae dolorum optio culpa, inventore ducimus quasi possimus, qui magni officiis, eius reiciendis illum doloremque voluptatibus assumenda quia?</p>
+        <p>Unde necessitatibus impedit nulla esse consequuntur beatae eos deserunt non quaerat aspernatur laborum voluptas eveniet rerum, ducimus nisi accusantium reiciendis sed. Ullam distinctio dicta saepe, accusantium eligendi autem iusto exercitationem.</p>
+
+        
+    </div>
+    </div>
+</body>
+</html>

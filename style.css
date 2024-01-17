@@ -10,16 +10,12 @@ body {
 .hero{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, #08001f, #30197d);
+    background: linear-gradient(45deg, #bbffc5, #11a640);
     color: #fff;
     position: relative;
 }
 
 .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 800px;
     height: 300px;
     position: absolute;
@@ -29,8 +25,24 @@ body {
     background: rgba(235, 0, 255, 0.11);
     border-radius: 30px;
     padding: 25px;
+    margin: 0 auto;
     text-shadow: 0 0 6px #fff;
     box-shadow: 0 0 10px rgba(235, 0, 255, 0.11);
+    
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 90%;
+    }
+    #phone-number::-webkit-input-placeholder{
+        font-size:6vw;
+    }
+    .inner-box {
+        flex-direction: row; /* Yatay düzende sıralama */
+        justify-content: center; /* Elemanları yatayda ortala */
+    }
+    
 }
 
 .container::before{
@@ -58,58 +70,66 @@ body {
 }
 
 .inner-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
     backdrop-filter: blur(40px);
     text-align: center;
     position: absolute;
-    top: 50px;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     border-radius: 30px;
 }
 
-.welcome{
-    font-size: 25px;
+.txt{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
-.clock{
+#phone-number{
+    position: relative;
     display: flex;
-    justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
     align-items: center;
-    margin-top: 20px;
+    justify-content: center;
+    border-radius: 30px;
+    width: 80%;
+    padding: 10px;
 }
 
-.clock span{
-    font-size: 80px;
-    width: 110px;
-    color: #fff;
-    display: inline-block;
-    text-align: center;
+.number-error {
+    color: red;
+}
+
+#wp {
+    position: absolute;
+    bottom: 5%;
+    left: 10vw;
+    right: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(82, 79, 82, 0.11);
+    border-radius: 30px;
+    padding: 2%;
+}
+
+#wp a {
     position: relative;
 }
 
-.clock span::after{
-    font-size: 16px;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
+#url {
+    text-decoration: none;
+    color: #091e0c;
+    font-size: 1.5rem;
+    margin: 5%;
 }
 
-#hour::after{
-    content: 'SAAT';
-}
-
-#minute::after{
-    content: 'DAKİKA';
-}
-
-#second::after{
-    content: 'SANİYE';
-}
-
-.text{
-    margin-top: 3%;
-    text-align: center;
-}

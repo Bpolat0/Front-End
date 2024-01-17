@@ -9,14 +9,28 @@
 <body>
     
 
-
+    <div class="hero">
+        <div class="container">
+            <div class="inner-box">
+                <div class="welcome">Merhaba, <span id="username"></span></div>
+                <div class="clock">
+                    <span id="hour"></span>
+                    <span>:</span>
+                    <span id="minute"></span>
+                    <span>:</span>
+                    <span id="second"></span>
+                </div>
+                <div class="text">Saat bilgisi yukarıdadır.</div>
+            </div>
+        </div>
+    </div>
 
 
 
 <script>
 
 let user = prompt("Adınızı giriniz: ");
-document.getElementById("user").innerHTML = user;
+document.getElementById("username").innerHTML = user;
 
 let hrs = document.getElementById("hour");
 let mins = document.getElementById("minute");
