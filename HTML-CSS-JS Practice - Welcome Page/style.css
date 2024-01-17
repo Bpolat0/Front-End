@@ -30,7 +30,9 @@ body {
     border-radius: 30px;
     padding: 25px;
     text-shadow: 0 0 6px #fff;
-    box-shadow: 0 0 10px rgba(235, 0, 255, 0.11);
+    box-shadow: 0 0 10px rgba(230, 64, 246, 0.18);
+    backdrop-filter: blur(40px);
+    
 }
 
 .container::before{
@@ -62,10 +64,7 @@ body {
     backdrop-filter: blur(40px);
     text-align: center;
     position: absolute;
-    top: 50px;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    padding: 2%;
     border-radius: 30px;
 }
 
